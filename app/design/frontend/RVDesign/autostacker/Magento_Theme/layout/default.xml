@@ -38,6 +38,12 @@
                     </arguments>
                 </block>
             </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="gallery.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Gallery</argument>
+                    <argument name="path" xsi:type="string">gallery</argument>
+                </arguments>
+            </block>
         </referenceContainer>
 
         <referenceBlock name="form.subscribe" remove="true"/>
