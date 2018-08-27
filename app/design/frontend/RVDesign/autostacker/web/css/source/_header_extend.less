@@ -1,0 +1,106 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .page-header {
+    margin-bottom: 0 !important;
+    background-color: white;
+    font-family: "Open Sans", Verdana, Arial, sans-serif;
+    max-height: 90px;
+    border-bottom: 5px solid #ffde17;
+
+    .panel.wrapper {
+      background-color: @color-black;
+      color: @color-white;
+      padding: 0;
+
+      .panel.header {
+        padding:0;
+      }
+
+      .header.links {
+        .header-social {
+          color: #E8950C;
+          font-weight: 700;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            color: #FF7600;
+          }
+        }
+
+        .header-questions {
+          color: yellow;
+        }
+
+        .header-phone {
+          color: @color-white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            color: @color-white;
+          }
+        }
+      }
+
+    }
+    .header.content {
+      padding: 0;
+      .logo {
+        margin: 0;
+        padding: 14px 0;
+        width: 250px;
+      }
+      .minicart-wrapper {
+        padding: 14px 0;
+      }
+    }
+  }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .page-header {
+    .panel.wrapper {
+      height: 30px;
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header {
+    border-bottom: 5px solid #ffde17;
+    .panel.wrapper {
+      height: 25px;
+
+      .panel.header {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width:1024px) {
+    .page-header {
+      .header.content {
+        .logo {
+          width: 220px;
+          margin-left: 1em;
+          padding: 20px 0;
+        }
+        .minicart-wrapper {
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}

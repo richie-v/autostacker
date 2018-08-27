@@ -1,0 +1,48 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">250</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="top.links">
+            <referenceBlock name="register-link" remove="true"/>           <!--for Create Account Link-->
+            <referenceBlock name="authorization-link" remove="true"/>      <!--for Sign In Link  -->
+            <referenceBlock name="my-account-link" remove="true"/>         <!--for My Account Link-->
+            <referenceBlock name="advanced-search-link" remove="true"/>     <!--for advanced search-->
+            <referenceBlock name="top.search" remove="true"/>              <!-- remove search function -->
+
+            <block class="Magento\Framework\View\Element\Template" name="social.footer"
+                   template="Magento_Theme::html/custom-header.phtml"/>
+        </referenceBlock>
+
+        <referenceContainer name="catalog.topnav">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="specifications.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Overview</argument>
+                    <argument name="path" xsi:type="string">overview</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="overview.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Specifications</argument>
+                    <argument name="path" xsi:type="string">specifications</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="benefits.link">
+                    <arguments>
+                        <argument name="label" xsi:type="string">Specifications</argument>
+                        <argument name="path" xsi:type="string">specifications</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="navigation.sections" remove="true"/>
+        <move element="catalog.topnav" destination="header-wrapper" after="logo"/>
+    </body>
+</page>

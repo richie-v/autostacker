@@ -1,0 +1,125 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  nav ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0;
+      li  {
+        float: none;
+        width: 200px;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      a {
+        line-height: 120%;
+        padding: 10px 15px;
+      }
+    }
+    li {
+      position: relative;
+      float: left;
+      margin: 0;
+      padding: 0;
+      &:hover {
+        background: #f6f6f6;
+      }
+      &:hover > ul {
+        display: block;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 59px;
+        padding: 0 20px;
+        color: #636363;
+        &:visited {
+          color: #636363;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #ffde17;
+        }
+      }
+    }
+  }
+  .nav-sections {
+    margin: 0;
+  }
+
+  a {
+    color: #E8950C;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .breadcrumbs {
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #f6f6f6;
+
+    a {
+      color: #E8950C;
+      text-decoration: none;
+      float: left;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #FF7600;
+    }
+
+    a:visited {
+      color: #E8950C;
+      text-decoration: none;
+      float: left;
+      font-weight: 700;
+    }
+
+    li {
+      float: left;
+      font-size: 12px;
+      font-family: "Open Sans", Verdana, Arial, sans-serif;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .breadcrumbs {
+    max-width: 100%;
+  }
+
+  @media (min-width:1300px) {
+    .breadcrumbs {
+      padding-left: 9%;
+    }
+  }
+}

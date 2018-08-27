@@ -1,0 +1,206 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  main, .page-wrapper {
+    background-color: #e3e4d4;
+  }
+
+  .as-hero {
+    background: url('@{baseDir}images/Home-Parking-Lift-Garage-Autostacker.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    height: 850px;
+    justify-content: center;
+    text-align: center;
+
+    .hero-inner {
+      align-self: flex-end;
+      padding-bottom: 20px;
+      .lowceiling {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+    }
+  }
+
+  .home-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .meet-autostacker {
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    h2 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 28px;
+      line-height: 1.5;
+      margin: 0 0 1.5em;
+    }
+  }
+
+  .as-btn {
+    line-height: 40px;
+    text-decoration: none;
+    color: #000;
+    padding: 0 15px;
+    font-size: 14px;
+    background: #ffde17;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+  }
+
+  .autostacker-specs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    > div {
+      max-width: 300px;
+      text-align: center;
+      > img {
+        margin-bottom: 40px;
+      }
+      > p {
+        line-height: 1.5;
+        margin: 0 0 1.5em;
+      }
+    }
+  }
+
+  .low-profile-platform {
+    background: url('@{baseDir}images/Low-Profile-Parking-Lift-Low-Clearance-Car.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .home-feature {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    div {
+      max-width: 60%;
+      margin: 100px auto;
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+      background-color: rgba(0,0,0,0.35);
+      h2 {
+        color: #fff;
+        font-size: 48px;
+        font-weight: bold;
+        text-shadow: 0px 1px 2px rgba(150, 150, 150, 0.5)
+      }
+      p {
+        font-size: 18px;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 0px 1px 2px rgba(150, 150, 150, 0.5);
+        margin: 0 0 1.5em;
+      }
+    }
+  }
+
+  .lifting-heights {
+    .one-half {
+      width: 50%;
+      float: left;
+    }
+    h2 {
+      font-size: 42px;
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        padding: 30px 0;
+        border-bottom: 1px solid #ccc;
+        font-size: 18px;
+        span strong {
+          margin-right:20px;
+        }
+        img {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          transition: all 1s ease;
+          max-width: 550px;
+        }
+      }
+      li.current img {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .storing-at-home {
+    background: url('@{baseDir}images/Storing-Car-At-Home-Parking-Lift.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 50px;
+  }
+
+  .home-specs {
+    margin-bottom: 50px;
+  }
+
+  .row {
+    width: 100%;
+    float: none;
+    display: block;
+    overflow: hidden;
+  }
+
+  .half {
+    width: 50%;
+    display: block;
+    float: left;
+    overflow: hidden;
+  }
+
+  .std ul {
+    list-style: disc outside;
+    margin-bottom: 1.5em;
+    li {
+      margin-left: 2em;
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

@@ -1,0 +1,87 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .page-footer {
+    padding-top: 0px;
+    background: #1a1a1a;
+
+    .footer.content {
+      clear: both;
+      max-width: 1350px;
+      width: auto;
+      margin: 0 auto;
+      border: 0;
+      padding-top: 0;
+    }
+
+    .footer {
+      .links {
+        list-style: none;
+        font-size: 11px;
+        color: #fff;
+        padding-right: 0;
+        margin-right: 3.125%;
+        li {
+          line-height: 76px;
+          padding: 0;
+          display: inline;
+        }
+        a {
+          color: #ffde17;
+          display: inline-block;
+          padding: 0 15px;
+          font-weight: bold;
+        }
+      }
+
+      .copyright {
+        text-align: center;
+        width: auto;
+        font-size: 11px;
+        padding: 30px 0;
+        display: inline-block;
+        color: #fff;
+        margin: 0;
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .page-footer .footer .links {
+    float: none;
+  }
+  .page-footer .footer .copyright {
+    float: none;
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-footer {
+    .footer {
+      .links {
+        float: right;
+      }
+      .copyright {
+        float: left;
+      }
+    }
+  }
+  .footer.content {
+    .links {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+}
